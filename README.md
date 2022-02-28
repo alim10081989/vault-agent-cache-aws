@@ -1,18 +1,10 @@
-# [Vault 1.1 Beta] Vault Agent Caching
+# Vault Agent Caching
 
-These assets are provided to provision AWS resources to perform the steps described in the [Vault Agent Caching](https://learn.hashicorp.com/vault/identity-access-management/agent-caching).
-
-**NOTE:** Currently, Vault 1.1 is in _beta_.
+Provision AWS resources to perform the steps described in the [Vault Agent Caching](https://learn.hashicorp.com/vault/identity-access-management/agent-caching).
 
 ---
 
-
 ## Demo Steps
-
->**NOTE:** The example Terraform in this repository is created for the demo purpose, and not suitable for production use.
-
-
-1. Set this location as your working directory
 
 1. Set your AWS credentials as environment variables: `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`
 
@@ -110,8 +102,6 @@ These assets are provided to provision AWS resources to perform the steps descri
        address = "http://<vault-server-host>:8200"
     }
     ```
-
-    **NOTE:** Notice the `cache` block. The TCP listener is configured to listen to port 8200 on the client host.
 
 1. Run Vault Agent
 
@@ -253,7 +243,7 @@ Cache eviction can be forced via `/agent/v1/cache-clear` endpoint, or via lease/
     $ vault lease revoke -prefix aws/creds
     ```
 
-1. Clean up the cloud resources
+1. Clean up resources
 
     ```plaintext
     $ terraform destroy -auto-approve
