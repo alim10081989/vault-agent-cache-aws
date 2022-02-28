@@ -8,7 +8,7 @@ Provision AWS resources to perform the steps described in the [Vault Agent Cachi
 
 1. Set your AWS credentials as environment variables: `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`
 
-1. Set the Terraform variable values in a file named `terraform.tfvars` (use `terraform.tfvars.example` as a base)
+1. Set the Terraform variable values in a file named `terraform.tfvars`
 
     **Example:**
 
